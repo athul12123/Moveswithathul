@@ -1,0 +1,368 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   MovesWithAthul - Your Fitness Journey
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+      scroll-behavior: smooth;
+    }
+    /* Scrollbar for dark theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #b91c1c;
+      border-radius: 10px;
+      border: 2px solid #1a1a1a;
+    }
+    /* Smooth fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 0.8s;
+      animation-timing-function: ease-out;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Button hover effect */
+    .btn-red {
+      background-color: #b91c1c;
+      transition: background-color 0.3s ease;
+    }
+    .btn-red:hover {
+      background-color: #ef4444;
+    }
+    /* Input focus */
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+  </style>
+ </head>
+ <body class="selection:bg-red-700 selection:text-white">
+  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-90 z-50 shadow-md">
+   <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a class="flex items-center space-x-3" href="#home">
+     <img alt="MovesWithAthul gym logo, stylized red and black gym icon with weights" class="w-12 h-12" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ac497b62-0e7b-4b10-ab83-e41b96c8155a.jpg" width="48"/>
+     <span class="text-red-600 font-bold text-2xl tracking-wide select-none">
+      MovesWithAthul
+     </span>
+    </a>
+    <button aria-label="Toggle menu" class="text-red-600 md:hidden focus:outline-none focus:ring-2 focus:ring-red-600" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+    <ul class="hidden md:flex space-x-10 text-gray-300 font-medium tracking-wide text-lg" id="menu">
+     <li>
+      <a class="hover:text-red-600 transition" href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-red-600 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-red-600 transition" href="#plans">
+       Workout &amp; Diet Plans
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-red-600 transition" href="#testimonials">
+       Testimonials
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-red-600 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="md:hidden bg-black bg-opacity-95 hidden px-6 pb-6" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 text-gray-300 font-medium tracking-wide text-lg">
+     <li>
+      <a class="block hover:text-red-600 transition" href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-red-600 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-red-600 transition" href="#plans">
+       Workout &amp; Diet Plans
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-red-600 transition" href="#testimonials">
+       Testimonials
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-red-600 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="pt-24">
+   <!-- Home Section -->
+   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in" id="home" style="animation-delay: 0.1s">
+    <img alt="MovesWithAthul gym logo, modern red and black stylized fitness icon with dumbbells and flames" class="w-40 h-40 mb-6 mx-auto" height="160" loading="lazy" src="https://storage.googleapis.com/a1aa/image/11092680-7fc9-4695-2c2a-cc0859b99696.jpg" width="160"/>
+    <h1 class="text-5xl md:text-6xl font-extrabold text-red-600 mb-4 leading-tight select-none">
+     Transform Your Body, Transform Your Life
+    </h1>
+    <p class="text-gray-300 max-w-3xl text-lg md:text-xl font-light">
+     Join MovesWithAthul and unlock your full potential with expert guidance, personalized workout and diet plans, and unwavering support.
+    </p>
+   </section>
+   <!-- About Section -->
+   <section class="max-w-7xl mx-auto px-6 py-20 fade-in" id="about" style="animation-delay: 0.3s">
+    <h2 class="text-4xl font-bold text-red-600 mb-12 text-center tracking-wide">
+     About Me
+    </h2>
+    <div class="flex flex-col md:flex-row md:space-x-12 items-center">
+     <div class="md:w-1/2 space-y-6 text-gray-300 text-lg leading-relaxed">
+      <p>
+       I’m a certified fitness trainer with over 10 years of experience helping clients achieve their dream bodies and healthier lifestyles. My passion is transforming lives through tailored workout routines and nutrition plans that fit your unique needs.
+      </p>
+      <p>
+       From overcoming personal struggles to achieving incredible transformations, my journey fuels my dedication to guide you every step of the way.
+      </p>
+      <p>
+       Let’s work together to unlock your strength, confidence, and vitality.
+      </p>
+     </div>
+     <div class="md:w-1/2 mt-10 md:mt-0 grid grid-cols-2 gap-6">
+      <img alt="Before and after transformation photo showing a muscular man in gym environment, red and black theme" class="rounded-lg shadow-lg object-cover w-full h-48 md:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0f540787-5a2d-495e-299b-208d9093e633.jpg" width="400"/>
+      <img alt="Before and after transformation photo showing a fit woman smiling in gym, red and black theme" class="rounded-lg shadow-lg object-cover w-full h-48 md:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5636ac3c-09ef-4ed1-7a98-9904e6902158.jpg" width="400"/>
+      <img alt="Close-up of hands gripping dumbbells with red gym gloves, black background" class="rounded-lg shadow-lg object-cover w-full h-48 md:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/47dda612-02e6-4c83-de69-72c4f77cf79b.jpg" width="400"/>
+      <img alt="Athletic person running on treadmill with red and black gym interior" class="rounded-lg shadow-lg object-cover w-full h-48 md:h-60" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e84db67a-5401-46ff-07d2-36dee801c604.jpg" width="400"/>
+     </div>
+    </div>
+   </section>
+   <!-- Workout & Diet Plans Section -->
+   <section class="bg-black bg-opacity-90 py-20 px-6 fade-in" id="plans" style="animation-delay: 0.5s">
+    <h2 class="text-4xl font-bold text-red-600 mb-12 text-center tracking-wide">
+     Workout &amp; Diet Plans
+    </h2>
+    <div class="max-w-7xl mx-auto grid gap-10 md:grid-cols-3">
+     <!-- Workout Plan Card -->
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col justify-between hover:shadow-red-700 transition-shadow duration-300">
+      <h3 class="text-2xl font-semibold text-red-600 mb-4">
+       Beginner Workout Plan
+      </h3>
+      <p class="text-gray-300 flex-grow mb-6">
+       Perfect for those starting their fitness journey. Focus on building strength and endurance with easy-to-follow routines.
+      </p>
+      <div class="text-3xl font-bold text-red-600 mb-6">
+       $49
+      </div>
+      <button aria-label="Buy Beginner Workout Plan" class="btn-red text-white font-semibold py-3 rounded-md shadow-md hover:shadow-lg transition">
+       Buy Now
+      </button>
+     </div>
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col justify-between hover:shadow-red-700 transition-shadow duration-300">
+      <h3 class="text-2xl font-semibold text-red-600 mb-4">
+       Advanced Workout Plan
+      </h3>
+      <p class="text-gray-300 flex-grow mb-6">
+       Designed for experienced athletes aiming to push limits and maximize muscle growth with high-intensity training.
+      </p>
+      <div class="text-3xl font-bold text-red-600 mb-6">
+       $99
+      </div>
+      <button aria-label="Buy Advanced Workout Plan" class="btn-red text-white font-semibold py-3 rounded-md shadow-md hover:shadow-lg transition">
+       Buy Now
+      </button>
+     </div>
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col justify-between hover:shadow-red-700 transition-shadow duration-300">
+      <h3 class="text-2xl font-semibold text-red-600 mb-4">
+       Custom Diet Plan
+      </h3>
+      <p class="text-gray-300 flex-grow mb-6">
+       Personalized nutrition plans tailored to your goals, preferences, and lifestyle for optimal results.
+      </p>
+      <div class="text-3xl font-bold text-red-600 mb-6">
+       $79
+      </div>
+      <button aria-label="Buy Custom Diet Plan" class="btn-red text-white font-semibold py-3 rounded-md shadow-md hover:shadow-lg transition">
+       Buy Now
+      </button>
+     </div>
+    </div>
+   </section>
+   <!-- Testimonials Section -->
+   <section class="max-w-7xl mx-auto px-6 py-20 fade-in" id="testimonials" style="animation-delay: 0.7s">
+    <h2 class="text-4xl font-bold text-red-600 mb-12 text-center tracking-wide">
+     Client Success Stories
+    </h2>
+    <div class="grid gap-10 md:grid-cols-3">
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
+      <img alt="Portrait of smiling male client with muscular build and short hair, gym background" class="w-24 h-24 rounded-full mb-6 object-cover shadow-md" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/32461b30-6282-4392-df10-ce939e7c7d22.jpg" width="96"/>
+      <p class="text-gray-300 italic mb-4">
+       "MovesWithAthul changed my life! The workout and diet plans were easy to follow and the results speak for themselves."
+      </p>
+      <h4 class="text-red-600 font-semibold">
+       James K.
+      </h4>
+      <span class="text-gray-500 text-sm">
+       Lost 25 lbs in 4 months
+      </span>
+     </div>
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
+      <img alt="Portrait of happy female client with fit physique and long hair tied back, gym background" class="w-24 h-24 rounded-full mb-6 object-cover shadow-md" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/984110b2-23c8-4035-3ec4-b1b8f8a6c920.jpg" width="96"/>
+      <p class="text-gray-300 italic mb-4">
+       "The personalized coaching and motivation helped me build confidence and strength I never thought possible."
+      </p>
+      <h4 class="text-red-600 font-semibold">
+       Samantha R.
+      </h4>
+      <span class="text-gray-500 text-sm">
+       Gained muscle and confidence
+      </span>
+     </div>
+     <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
+      <img alt="Portrait of middle-aged male client with athletic build and beard, gym background" class="w-24 h-24 rounded-full mb-6 object-cover shadow-md" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd1781f3-ca43-4b85-1382-e569468b824d.jpg" width="96"/>
+      <p class="text-gray-300 italic mb-4">
+       "The best investment I’ve made in my health. The plans are detailed and the support is incredible."
+      </p>
+      <h4 class="text-red-600 font-semibold">
+       Michael T.
+      </h4>
+      <span class="text-gray-500 text-sm">
+       Improved endurance and overall health
+      </span>
+     </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section class="bg-black bg-opacity-90 py-20 px-6 fade-in" id="contact" style="animation-delay: 0.9s">
+    <h2 class="text-4xl font-bold text-red-600 mb-12 text-center tracking-wide">
+     Get In Touch
+    </h2>
+    <div class="max-w-4xl mx-auto grid gap-12 md:grid-cols-2">
+     <form action="https://formspree.io/f/mgebzvyo" class="space-y-6" id="contact-form" method="POST" novalidate="">
+      <div>
+       <label class="block mb-2 font-semibold text-gray-300" for="name">
+        Name
+       </label>
+       <input class="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-gray-200 placeholder-gray-500 focus:ring-2 focus:ring-red-600" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold text-gray-300" for="email">
+        Email
+       </label>
+       <input class="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-gray-200 placeholder-gray-500 focus:ring-2 focus:ring-red-600" id="email" name="_replyto" placeholder="you@example.com" required="" type="email"/>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold text-gray-300" for="message">
+        Message
+       </label>
+       <textarea class="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-gray-200 placeholder-gray-500 focus:ring-2 focus:ring-red-600 resize-none" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+      </div>
+      <button class="btn-red w-full text-white font-semibold py-3 rounded-md shadow-md hover:shadow-lg transition" type="submit">
+       Send Message
+      </button>
+     </form>
+     <div class="flex flex-col justify-center items-center space-y-8 text-center text-gray-300">
+      <p class="text-lg max-w-md">
+       Follow me on social media or send a quick message on WhatsApp. I’m here to help you start your fitness journey today!
+      </p>
+      <div class="flex space-x-8 text-4xl text-red-600">
+       <a aria-label="YouTube" class="hover:text-red-400 transition" href="https://www.youtube.com/channel/UCfitness" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-youtube">
+        </i>
+       </a>
+       <a aria-label="Instagram" class="hover:text-red-400 transition" href="https://www.instagram.com/profittrainer" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-instagram">
+        </i>
+       </a>
+       <a aria-label="WhatsApp" class="hover:text-red-400 transition" href="https://wa.me/1234567890" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-whatsapp">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-black bg-opacity-90 py-6 text-center text-gray-500 text-sm select-none">
+   © 2024 MovesWithAthul. All rights reserved.
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.querySelector('i').classList.toggle('fa-bars');
+      menuBtn.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.querySelector('i').classList.add('fa-bars');
+        menuBtn.querySelector('i').classList.remove('fa-times');
+      });
+    });
+
+    // Animate fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (
+      entries,
+      appearOnScroll
+    ) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    },
+    appearOptions);
+
+    faders.forEach((fader) => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+ </body>
+</html>
